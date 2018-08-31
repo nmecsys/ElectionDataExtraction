@@ -23,8 +23,12 @@ def election_data(datai, dataf,save = True,unidade_federativa_p = 6, ano_p = 201
     url_fragment =  "unidades_federativas_id=" +  unidade_federativa  + "&cargos_id=" + cargos_id +"&ano="+ ano +"&data_pesquisa_de="+ data_pesquisa_de + "&data_pesquisa_ate="+  data_pesquisa_ate + "&turno=" + turno +"&tipo_id="+ tipo_id +"&order_column="+ order_column + "&order_type=asc"
     url_request = url_base + url_fragment
     req = requests.get(url = url_request)
-    data = req.content
-    df = pd.read_json(data)
+    
+    if(req.ok):
+        data = req.content
+        df = pd.read_json(data)
+    else:
+        return(print("Error - problem in response"))
     if(save):    
         df.to_csv("df_eleicoes_2018.csv",sep = ";", encoding = "utf-8")
     else:
