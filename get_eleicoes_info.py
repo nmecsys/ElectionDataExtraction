@@ -27,4 +27,5 @@ def election_data(datai, dataf,save = True,unidade_federativa_p = 6, ano_p = 201
     df = pd.read_json(data)
     if(save):    
         df.to_csv("df_eleicoes_2018.csv",sep = ";", encoding = "utf-8")
-    
+    else:
+        return(df)
