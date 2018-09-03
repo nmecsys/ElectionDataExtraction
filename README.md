@@ -10,7 +10,7 @@ Code that captures election poll data from the API provided by [power360](https:
 |    Instituto          |     :no_entry:          |
 |    Cargo              | Governador (1), Prefeito (2), Presidente (3) e Senador (4)       |
 |    Candidato          |    :no_entry:           |
-|    Ano da Eleição     |    :no_entry:           |
+|    Ano da Eleição     |            |
 |    Data De            |  data inicio da captura - YYYY-MM-DD                     |
 |    Data Até           |  data fim da captura - YYYY-MM-DD                        |
 |    Turno              |  Todos (T), Primeiro e Segundo                           |
